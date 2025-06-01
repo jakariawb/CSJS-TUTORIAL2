@@ -1,0 +1,45 @@
+#btn ,#btn2 , #ch{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-weight: 900;
+    
+
+}
+#btn ,#btn2:hover{
+    content: '';
+    background-color: rgb(134, 129, 129);
+    color: rgb(255, 242, 242);
+}
+#body, #continer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+h1{
+    text-shadow: rgb(28, 140, 174) 1px 0 10px;
+    font-size: 50px;
+    text-align:center;
+    justify-content: center;
+}
+#continer{
+   margin-top: 200px;
+}
+#ch,#h {
+    height: 50px;
+    
+    margin: 30px;
+   font-size: 30px;
+  background-color: aliceblue;
+  color: black;
+ 
+}
+.copy{
+    padding: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 60px;
+}
