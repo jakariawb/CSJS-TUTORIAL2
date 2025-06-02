@@ -1,0 +1,11 @@
+ #succes,#error,#invalid{
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    height: 80px;
+    width: 150px;
+
+ }
+ .dutton{
+    margin: 10px;
+ }

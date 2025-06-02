@@ -40,10 +40,12 @@ function main1 (){
        var rends = gnaratRGB()
        body2.style.backgroundColor = rends;
        colorbox1.value = rends;
-   })
+   });
    copy1.addEventListener('click', function(){
        navigator.clipboard.writeText(colorbox1.value)
-   })
+        generateToastMessage(`${colorbox1.value}`)
+       
+   });          
    
 }
 function gnaratRGB(){
@@ -52,4 +54,22 @@ function gnaratRGB(){
     var blue = Math.floor(Math.random() * 256);
   return `#${red.toString(16).padStart(2, '0')}${green.toString(16).padStart(2, '0')}${blue.toString(16).padStart(2, '0')}`;
 
+}
+function generateToastMessage(msg) {
+  var div = document.createElement('div');
+  div.innerText = msg;
+
+  div.className = 'toast-message toast-message-slide-in';
+
+  div.addEventListener('click', function () {
+    div.classList.remove('toast-message-slide-in');
+    div.classList.add('toast-message-slide-out');
+
+    // Remove the div after animation ends
+    div.addEventListener('animationend', function () {
+      div.remove();
+    });
+  });
+
+  document.body.appendChild(div);
 }
